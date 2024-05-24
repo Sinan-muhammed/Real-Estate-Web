@@ -1,0 +1,123 @@
+@import "../../Responsive.scss";
+
+*{
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+
+
+    a{
+        text-decoration: none;
+        color: black;
+        transition: all 0.4s ease;
+
+        &:hover{
+            scale: 1.05;      
+        }
+
+        @include sm{
+              display: none
+        }
+    }
+
+    .left{
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .logo{
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img{
+                width: 28px;
+            }
+
+            span{
+                @include md{
+                    display: none;
+                }
+
+                @include sm {
+                    display: initial;
+                }
+            }
+        }
+
+        
+    }
+
+    .right{
+        flex: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 50px;
+        height: 100px;
+        background-color: bisque;
+          
+        @include sm{
+            background-color: transparent;
+        }
+
+        a{
+           padding: 12px 24px;
+           margin: 20px; 
+        }
+
+        .register{
+            background-color: #fece51;
+        }
+
+        .menuIcon{
+            display: none;
+            z-index: 999;
+
+            img{
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+            }
+
+            @include sm {
+                display:inline ;
+            }
+        }
+
+        .menu{
+            position: absolute;
+            top: 0;
+            right: -50%;
+            background-color: black;
+            color: white;
+            height: 100%;
+            width: 50%;
+            transition: all 1s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+
+            &.active{
+                right: 0;
+                // display: inline;
+            }
+
+            @include sm{
+                a{
+                    display: initial;
+                    color: aliceblue;
+                }
+            }
+        }
+    }
+}
