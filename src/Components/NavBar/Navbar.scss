@@ -1,8 +1,5 @@
 @import "../../Responsive.scss";
 
-*{
-    overflow: hidden;
-}
 nav{
     display: flex;
     justify-content: space-between;
@@ -62,9 +59,12 @@ nav{
         align-items: center;
         gap: 50px;
         height: 100px;
-        background-color: bisque;
+        background-color: #fcf5f3;
           
         @include sm{
+            background-color: transparent;
+        }
+        @include md{
             background-color: transparent;
         }
 
