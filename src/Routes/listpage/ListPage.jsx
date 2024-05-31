@@ -19,7 +19,7 @@ const List = ()=>{
             </div>
            </div>
            <div className="mapContainer"> 
-             <Map/>
+             <Map item={data}/>
            </div>
        </div>
         </>
