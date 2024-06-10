@@ -13,7 +13,6 @@
     .detail{
         flex: 3;
         height: 100%;
-        overflow-y: scroll;
 
         @include md{
            flex: none;
@@ -95,7 +94,6 @@
         flex: 2;
         background-color: #fcf5f3;
         height: 100%;
-        overflow-y: scroll;
 
         @include md{
             flex: none;

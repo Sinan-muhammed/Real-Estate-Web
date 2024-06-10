@@ -1,12 +1,14 @@
-import { useState } from 'react'
-import Home from './Routes/homepage/Home'
-import List from './Routes/listpage/ListPage'
+
+import Home from './Routes/homepage/Home';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Layout from './Routes/Layout/Layout'
-import Single from './Routes/singlePage/singlePage';
+
+import ListPage from './Routes/ListPage/listPage.jsx';
+import Layout from './Routes/Layout/Layout.jsx';
+import Single from './Routes/singlePage/singlePage.jsx';
+import Profile from './Routes/ProfilePage/Profile.jsx';
 
 function App() {
 
@@ -21,15 +23,15 @@ function App() {
         },
         {
           path:'/list',
-          element:<List/>
+          element:<ListPage/>
         },
         {
           path:'/:id',
           element:<Single/>
         },
         {
-          path:'/list',
-          element:<List/>
+          path:'/profile',
+          element:<Profile/>
         }
       ]
     },

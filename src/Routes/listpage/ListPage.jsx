@@ -1,10 +1,10 @@
 import Filter from '../../Components/NavBar/Filter/Filter'
 import { listData } from '../../lib/dummydata'
 import Card from '../../Components/Card/Card'
-import './Listpage.scss'
+import './listPage.scss'
 import Map from '../../Components/Map/Map'
 
-const List = ()=>{
+const listPage = ()=>{
 
     const data =listData
     return (
@@ -26,4 +26,4 @@ const List = ()=>{
     )
 }
 
-export default List
+export default listPage
